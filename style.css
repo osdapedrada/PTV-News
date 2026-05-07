@@ -1,0 +1,178 @@
+/* Configurações de Cores e Estilo Geral */
+:root {
+    --azul-escuro: #1a2a3a;     /* Cor para cabeçalho e títulos */
+    --vermelho-jornal: #c0392b; /* Cor para detalhes e destaques */
+    --fundo-site: #f4f7f6;      /* Cor de fundo leve */
+    --texto: #2d3436;           /* Cor da letra principal */
+    --branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Fonte clássica de jornal */
+    background-color: var(--fundo-site);
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 8px solid var(--vermelho-jornal);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container da Reportagem */
+.container {
+    max-width: 850px;
+    margin: -40px auto 40px; /* Faz o conteúdo subir um pouco sobre o header */
+    background: var(--branco);
+    padding: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.article-header h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.metadata {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #636e72;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo do Texto */
+h2 {
+    font-family: Arial, sans-serif;
+    color: var(--azul-escuro);
+    border-left: 5px solid var(--vermelho-jornal);
+    padding-left: 15px;
+    margin: 40px 0 20px;
+    font-size: 1.6rem;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+    text-align: justify;
+}
+
+/* Caixas de Destaque (Casos e Especialistas) */
+.case-card {
+    background: #fff5f5;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #ffeaea;
+}
+
+.case-card h3 {
+    margin-top: 0;
+    color: var(--vermelho-jornal);
+    font-family: Arial, sans-serif;
+}
+
+.expert-box {
+    background: #f0f4f8;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 5px;
+    border-left: 5px solid var(--azul-escuro);
+}
+
+.expert-box h4 {
+    margin-top: 0;
+    color: #2980b9;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Lista de Ações */
+.action-list {
+    list-style: none;
+    padding: 0;
+}
+
+.action-list li {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    border-bottom: 2px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.action-list li strong {
+    color: var(--vermelho-jornal);
+}
+
+/* Seção de Comentários */
+.comments-area {
+    margin-top: 50px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+footer strong {
+    color: #f1c40f; /* Amarelo para destacar a escola */
+}
+
+/* Ajustes para Celular */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 30px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .article-header h1 {
+        font-size: 1.8rem;
+    }
+}
