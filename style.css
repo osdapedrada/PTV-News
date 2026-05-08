@@ -255,11 +255,7 @@ p {
 
 .students-name {
     margin-top: 20px;
-    font-size: 0.9rem;
-}
-    
-.students-name strong {
-    color: var(--accent);
+    font-size: 0.7rem;
 }
 
 .school-name {
