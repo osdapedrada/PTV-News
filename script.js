@@ -20,7 +20,7 @@ var disqus_config = function () {
      * Onde diz 'seunome-paulo-bauer', devem substituir pelo "Shortname" 
      * que criarem ao registar o site gratuitamente em disqus.com.
      */
-    s.src = 'https://seunome-paulo-bauer.disqus.com/embed.js'; 
+    s.src = 'https://ptv-news.disqus.com/embed.js'; 
     
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
