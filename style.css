@@ -1,178 +1,285 @@
-/* Configurações de Cores e Estilo Geral */
+/* --- Variáveis de Design e Temas --- */
 :root {
-    --azul-escuro: #1a2a3a;     /* Cor para cabeçalho e títulos */
-    --vermelho-jornal: #c0392b; /* Cor para detalhes e destaques */
-    --fundo-site: #f4f7f6;      /* Cor de fundo leve */
-    --texto: #2d3436;           /* Cor da letra principal */
-    --branco: #ffffff;
+    /* Cores Modo Claro */
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-main: #2d3436;
+    --text-light: #636e72;
+    --primary: #1a2a3a;
+    --accent: #c0392b;
+    --nav-bg: #1a2a3a;
+    --nav-text: #ffffff;
+    --border: #e1e4e8;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="dark"] {
+    /* Cores Modo Escuro */
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-light: #a0a0a0;
+    --primary: #8e44ad;
+    --accent: #e74c3c;
+    --nav-bg: #000000;
+    --border: #333333;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Reset e Global --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
-    font-family: 'Georgia', serif; /* Fonte clássica de jornal */
-    background-color: var(--fundo-site);
-    color: var(--texto);
+    font-family: 'Georgia', serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
     line-height: 1.8;
 }
 
-/* Cabeçalho */
-header {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    padding: 60px 20px;
-    text-align: center;
-    border-bottom: 8px solid var(--vermelho-jornal);
+/* --- Navegação Profissional --- */
+.navbar {
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
-header h1 {
-    font-size: 3rem;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.theme-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* --- Header de Notícia --- */
+.main-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop'); /* Imagem de fundo genérica para impacto */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.header-category {
+    font-family: Arial;
+    font-weight: bold;
+    color: var(--accent);
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
-.tagline {
-    font-family: Arial, sans-serif;
-    font-size: 1.1rem;
-    opacity: 0.9;
+.main-header h1 {
+    font-size: 3.5rem;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.1;
 }
 
-/* Container da Reportagem */
+/* --- Container e Artigo --- */
 .container {
-    max-width: 850px;
-    margin: -40px auto 40px; /* Faz o conteúdo subir um pouco sobre o header */
-    background: var(--branco);
+    max-width: 900px;
+    margin: -50px auto 50px;
+    background: var(--bg-card);
     padding: 60px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px var(--shadow);
 }
 
-.article-header h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    color: #111;
-    margin-bottom: 15px;
+.article-info {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
 }
 
 .metadata {
-    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 20px;
+    font-family: Arial;
     font-size: 0.85rem;
-    color: #636e72;
-    text-transform: uppercase;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+    color: var(--text-light);
 }
 
-/* Estilo do Texto */
+.lead-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* --- Elementos de Texto --- */
 h2 {
-    font-family: Arial, sans-serif;
-    color: var(--azul-escuro);
-    border-left: 5px solid var(--vermelho-jornal);
-    padding-left: 15px;
-    margin: 40px 0 20px;
-    font-size: 1.6rem;
+    font-family: Arial;
+    font-size: 1.8rem;
+    margin: 50px 0 25px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 p {
-    margin-bottom: 20px;
-    font-size: 1.15rem;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
     text-align: justify;
 }
 
-/* Caixas de Destaque (Casos e Especialistas) */
+/* --- Cards e Destaques --- */
 .case-card {
-    background: #fff5f5;
-    padding: 25px;
+    background: var(--bg-body);
+    padding: 30px;
+    border-radius: 12px;
     margin: 30px 0;
-    border-radius: 5px;
-    border: 1px solid #ffeaea;
+    border: 1px solid var(--border);
 }
 
 .case-card h3 {
-    margin-top: 0;
-    color: var(--vermelho-jornal);
-    font-family: Arial, sans-serif;
+    font-family: Arial;
+    color: var(--accent);
+    margin-bottom: 15px;
 }
 
 .expert-box {
-    background: #f0f4f8;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 5px;
-    border-left: 5px solid var(--azul-escuro);
-}
-
-.expert-box h4 {
-    margin-top: 0;
-    color: #2980b9;
-    font-family: Arial, sans-serif;
-    margin-bottom: 10px;
-}
-
-/* Lista de Ações */
-.action-list {
-    list-style: none;
-    padding: 0;
-}
-
-.action-list li {
-    background: #fff;
-    margin-bottom: 12px;
-    padding: 12px 18px;
-    border-radius: 4px;
-    border-bottom: 2px solid #ddd;
-    font-family: Arial, sans-serif;
-}
-
-.action-list li strong {
-    color: var(--vermelho-jornal);
-}
-
-/* Seção de Comentários */
-.comments-area {
-    margin-top: 50px;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
+    border-left: 5px solid var(--primary);
+    padding-left: 25px;
     margin: 40px 0;
 }
 
-/* Rodapé */
-footer {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    text-align: center;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
+.expert-box h4 {
+    font-family: Arial;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
-footer p {
+.action-list {
+    list-style: none;
+    display: grid;
+    gap: 15px;
+}
+
+.action-list li {
+    background: var(--bg-body);
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: Arial;
+}
+
+.action-list i {
+    color: #27ae60;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background: var(--nav-bg);
+    color: white;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.students-credit {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.students-credit strong {
+    color: var(--accent);
+}
+
+.school-name {
     font-size: 0.9rem;
-    margin-bottom: 5px;
+    opacity: 0.7;
+    margin-bottom: 30px;
 }
 
-footer strong {
-    color: #f1c40f; /* Amarelo para destacar a escola */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.5rem;
 }
 
-/* Ajustes para Celular */
-@media (max-width: 768px) {
+/* --- Responsividade --- */
+@media (max-width: 850px) {
     .container {
-        margin: 10px;
         padding: 30px;
+        margin: 10px auto;
+        width: 95%;
     }
-    header h1 {
+    
+    .main-header h1 {
         font-size: 2rem;
     }
-    .article-header h1 {
-        font-size: 1.8rem;
+    
+    .nav-menu {
+        display: none; /* Em projetos reais, usaríamos um menu hambúrguer aqui */
     }
 }
+
