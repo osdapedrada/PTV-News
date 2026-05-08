@@ -3,98 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise: Xenofobia no Século XXI | E.E.B. Paulo Bauer</title>
+    <title>Jornal Opinião | E.E.B. Paulo Bauer</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-            <h1>JORNAL OPINIÃO</h1>
-            <p class="tagline">Informação com profundidade e respeito</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="Logo Jornal Opinião" class="logo">
+                <span class="brand-name">JORNAL OPINIÃO</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Sociedade</a></li>
+                <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Educação</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" title="Alternar Tema">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="header-overlay">
+            <p class="header-category">DIREITOS HUMANOS</p>
+            <h1>A Persistência da Xenofobia no Século XXI</h1>
+            <p class="tagline">Uma análise profunda sobre os episódios de intolerância e os caminhos para a superação.</p>
         </div>
     </header>
 
     <main class="container">
-        <article>
-            <header class="article-header">
-                <h1>A Persistência da Xenofobia no Século XXI: Análise sobre os Casos Félix e Lucas</h1>
+        <article class="news-article">
+            <header class="article-info">
                 <div class="metadata">
-                    <span>Publicado em 07 de Maio de 2026</span>
-                    <span>•</span>
-                    <span>Seção: Sociedade & Direitos Humanos</span>
+                    <span class="meta-item"><i class="fa-solid fa-calendar-days"></i> 07 de Maio de 2026</span>
+                    <span class="meta-item"><i class="fa-solid fa-user-group"></i> Turma 201 - Paulo Bauer</span>
                 </div>
             </header>
 
             <section class="reportagem-texto">
-                <p>
+                <p class="lead-text">
                     A xenofobia, muitas vezes confundida com a aversão ao estrangeiro, é um fenômeno complexo que se ramifica em diversas formas de exclusão. 
-                    Ela não se limita às fronteiras internacionais; mas se manifesta no cotidiano através da rejeição ao sotaque, aos costumes e à ancestralidade de cada indivíduo.
+                    Ela não se limita às fronteiras internacionais; manifesta-se no cotidiano através da rejeição ao sotaque, aos costumes e à ancestralidade.
                 </p>
-                <p>
-                    Recentemente, houve dois episódios ocorridos em nossa região: a agressão contra o jovem português <strong>Félix</strong> e a perseguição cultural sofrida pelo jovem <strong>Lucas</strong>, de raízes sertanejas. Reacenderam o debate sobre a intolerância linguística e a urgência de políticas de respeito à diversidade.
-                </p>
-            </section>
 
-            <section>
-                <h2>As Faces da Intolerância no Cotidiano</h2>
+                <p>Recentemente, dois episódios ocorridos em nossa região reacenderam o debate: a agressão contra o jovem português <strong>Félix</strong> e a perseguição cultural sofrida pelo jovem <strong>Lucas</strong>, de raízes sertanejas. Tais fatos evidenciam a urgência de políticas de respeito à diversidade.</p>
+
+                <h2><i class="fa-solid fa-eye"></i> As Faces da Intolerância no Cotidiano</h2>
                 <p>Os casos registrados mostram que a agressão raramente é isolada; ela é o ápice de um processo de desumanização.</p>
 
                 <div class="case-card">
                     <h3>O Caso Félix</h3>
-                    <p>Alvo de ataques por sua nacionalidade portuguesa, Félix foi confrontado com o discurso de "roubo de espaço". Aqui, a xenofobia se manifesta como uma barreira ao acolhimento de quem busca novas oportunidades, ignorando laços históricos e linguísticos.</p>
+                    <p>Alvo de ataques por sua nacionalidade, Félix foi confrontado com o discurso de "roubo de espaço". Aqui, a xenofobia atua como barreira ao acolhimento de quem busca novas oportunidades.</p>
                 </div>
 
                 <div class="case-card">
                     <h3>O Caso Lucas</h3>
-                    <p>Vítima de deboche por seu sotaque regional e cultura do interior, Lucas sofreu o que chamamos de preconceito linguístico e regionalismo. O agressor, ao ridicularizar seu jeito de falar, tentou impor uma hierarquia inexistente.</p>
+                    <p>Vítima de deboche por seu sotaque regional, Lucas sofreu preconceito linguístico. O agressor tentou impor uma hierarquia cultural inexistente através da ridicularização.</p>
                 </div>
-            </section>
 
-            <section>
-                <h2>Por que isso acontece?</h2>
+                <h2><i class="fa-solid fa-book-open"></i> Perspectiva Acadêmica</h2>
                 <p>Para compreender a gravidade desses atos, recorremos a estudos que analisam a raiz do problema:</p>
 
                 <div class="expert-box">
-                    <h4>O Medo do "Outro" (Durval Muniz de Albuquerque Júnior)</h4>
-                    <p>Em sua obra "Xenofobia: medo e rejeição ao estrangeiro", o historiador explica que a xenofobia é alimentada por uma insegurança identitária. Quando um grupo se sente ameaçado pela presença do "diferente", projeta nele seus medos e frustrações.</p>
+                    <h4>O Medo do "Outro"</h4>
+                    <p><em>Durval Muniz de Albuquerque Júnior</em> explica que a xenofobia é alimentada por uma insegurança identitária. O "diferente" passa a ser um alvo para projeções de frustrações internas.</p>
                 </div>
 
                 <div class="expert-box">
-                    <h4>A Violência através do Discurso (Jocenilson Ribeiro)</h4>
-                    <p>O professor da UFS analisa como a fala é um marcador de identidade. Ridicularizar o sotaque ou a cultura não é uma "brincadeira", mas sim o uso da fala como instrumento para rotular os outros como "inferior".</p>
+                    <h4>A Violência através do Discurso</h4>
+                    <p>O professor <em>Jocenilson Ribeiro</em> (UFS) analisa como a fala é um marcador de identidade. Ridicularizar o sotaque é o uso da fala como instrumento de poder e rotulagem.</p>
                 </div>
-            </section>
 
-            <section>
-                <h2>O Caminho para a Superação deste Mal</h2>
-                <p>A xenofobia é <strong>crime no Brasil (Lei n° 7.716/1989)</strong>. O combate exige uma postura ativa de todos:</p>
+                <h2><i class="fa-solid fa-handshake"></i> Caminhos para a Superação</h2>
+                <p>A xenofobia é <strong>crime no Brasil (Lei n° 7.716/1989)</strong>. O combate exige uma postura ativa e ética:</p>
 
                 <ul class="action-list">
-                    <li><strong>Educação:</strong> Promover o entendimento de que não existe cultura "superior".</li>
-                    <li><strong>Denúncia:</strong> O uso de tecnologias é essencial para a materialização das provas.</li>
-                    <li><strong>Empatia:</strong> Reconhecer que a diversidade nos torna humanos.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Educação:</strong> Desconstruir a ideia de hierarquia cultural.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Denúncia:</strong> Fundamental para a materialização de provas e punição legal.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Empatia:</strong> Reconhecer a diversidade como o maior patrimônio humano.</li>
                 </ul>
             </section>
 
-            <hr>
-
-            <section class="comments-area">
-                <h2>Espaço de Discussão</h2>
-                <p>Participe do debate deixando sua opinião abaixo:</p>
-                <div id="disqus_thread"></div>
-            </section>
+            <div class="share-section">
+                <hr>
+                <section id="comments-section" class="comments-area">
+                    <h2><i class="fa-solid fa-comments"></i> Espaço de Discussão</h2>
+                    <p>Sua opinião é fundamental para o debate acadêmico. Comente abaixo:</p>
+                    <div id="disqus_thread"></div>
+                </section>
+            </div>
         </article>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Portal de Notícias Acadêmicas.</p>
-            <p><strong>Site criado por alunos da turma 201 da Escola Estadual Básica Paulo Bauer</strong></p>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Jornal Opinião - Portal Acadêmico</p>
+            <p class="students-credit">Desenvolvido por alunos da <strong>Turma 201</strong></p>
+            <p class="school-name">Escola Estadual Básica Paulo Bauer</p>
+            <div class="social-links">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
