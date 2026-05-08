@@ -253,6 +253,14 @@ p {
     color: var(--accent);
 }
 
+.students-name {
+    margin-top: 20px;
+    font-size: 0.9rem;
+
+.students-name strong {
+    color: var(--accent);
+}
+
 .school-name {
     font-size: 0.9rem;
     opacity: 0.7;
